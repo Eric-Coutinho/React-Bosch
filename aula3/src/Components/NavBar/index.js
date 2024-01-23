@@ -17,6 +17,7 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className={styles.navbarCards}>
             <Link to='/' style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+            <Link to='/new' style={{color: 'white', textDecoration: 'none'}}>Adicionar Música</Link>
             <Link to='/extrato' style={{color: 'white', textDecoration: 'none'}}>Extrato</Link>
             <Link to='/add' style={{color: 'white', textDecoration: 'none'}}>Adicionar Pagamento</Link>
           </Nav>

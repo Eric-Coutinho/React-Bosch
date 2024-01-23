@@ -8,6 +8,7 @@ import AboutPage from './Pages/AboutPage';
 import SearchPage from './Pages/SearchPage';
 import CounterPage from './Pages/CounterPage';
 import ReqPage from './Pages/RequisitionPage';
+import NewMusicPage from './Pages/NewMusicPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import CarteiraPage from './Pages/CarteiraPage';
 import PagamentoPage from './Pages/PagamentoPage';
@@ -24,6 +25,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<ReqPage />} />
+          <Route path='/new' element={<NewMusicPage />} />
           <Route path='/add' element={<PagamentoPage />} />
           <Route path='/extrato' element={<CarteiraPage />} />
           <Route path='/*' element={<NotFoundPage />} />
