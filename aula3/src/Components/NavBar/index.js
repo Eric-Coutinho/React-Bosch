@@ -1,6 +1,8 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+import { Link } from 'react-router-dom';
+
 import * as Icon from 'react-bootstrap-icons';
 import styles from "./styles.module.scss";
 import { useContext } from 'react';
@@ -14,8 +16,9 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{backgroundColor: 'white'}}/>
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className={styles.navbarCards}>
-            <Nav.Link href='/extrato' style={{color: 'white'}}>Extrato</Nav.Link>
-            <Nav.Link href='/' style={{color: 'white'}}>Adicionar Pagamento</Nav.Link>
+            <Link to='/' style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+            <Link to='/extrato' style={{color: 'white', textDecoration: 'none'}}>Extrato</Link>
+            <Link to='/add' style={{color: 'white', textDecoration: 'none'}}>Adicionar Pagamento</Link>
           </Nav>
         </Navbar.Collapse>
           <button type='button' className={styles.navbarButton} onClick={ changeMode }>

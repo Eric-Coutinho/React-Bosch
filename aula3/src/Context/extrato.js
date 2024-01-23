@@ -6,10 +6,10 @@ ExtratoContext.displayName = 'Extrato';
 export const ExtratoProvider = ({ children }) => {
     const [extrato, setExtrato] = useState([]);
 
-    function addPagamento(forma, data, valor){
+    function addPagamento(tipo, data, valor){
         setExtrato(current => [...current, {
             id: extrato.length,
-            forma: forma,
+            tipo: tipo,
             data: data,
             valor: valor
         }]);

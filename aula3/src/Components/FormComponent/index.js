@@ -14,7 +14,7 @@ function FormComponent() {
   function handleSubmit(e) 
   {
     e.preventDefault();
-    addPagamento(tipo, data, valor)
+    addPagamento(tipo, data, valor);
   }
 
   return (
@@ -42,7 +42,7 @@ function FormComponent() {
           <Form.Control type="number" placeholder="Digite o valor" />
         </Form.Group>
 
-        <Button variant="primary" size="md" active type="button" onClick={(e) => handleSubmit(e)}>
+        <Button variant="primary" size="md" active type="submit" onClick={(e) => handleSubmit(e)}>
           Salvar
         </Button>
       </Form>

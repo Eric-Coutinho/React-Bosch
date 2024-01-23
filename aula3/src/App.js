@@ -7,9 +7,10 @@ import NavBar from './Components/NavBar';
 import AboutPage from './Pages/AboutPage';
 import SearchPage from './Pages/SearchPage';
 import CounterPage from './Pages/CounterPage';
+import ReqPage from './Pages/RequisitionPage';
 import NotFoundPage from './Pages/NotFoundPage';
-import PagamentoPage from './Pages/PagamentoPage';
 import CarteiraPage from './Pages/CarteiraPage';
+import PagamentoPage from './Pages/PagamentoPage';
 
 import { DarkModeContext } from './Context/darkMode';
 import { ExtratoContext, ExtratoProvider } from './Context/extrato';
@@ -22,7 +23,8 @@ function App() {
       <ExtratoProvider>
         <NavBar />
         <Routes>
-          <Route path='/' element={<PagamentoPage />} />
+          <Route path='/' element={<ReqPage />} />
+          <Route path='/add' element={<PagamentoPage />} />
           <Route path='/extrato' element={<CarteiraPage />} />
           <Route path='/*' element={<NotFoundPage />} />
         </Routes>
