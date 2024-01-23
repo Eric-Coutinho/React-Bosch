@@ -1,4 +1,5 @@
 import { Route, Router, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
+import { useContext } from 'react'
 
 import './App.css';
 import HomePage from './Pages/HomePage';
@@ -7,22 +8,25 @@ import AboutPage from './Pages/AboutPage';
 import SearchPage from './Pages/SearchPage';
 import CounterPage from './Pages/CounterPage';
 import NotFoundPage from './Pages/NotFoundPage';
+import PagamentoPage from './Pages/PagamentoPage';
+import CarteiraPage from './Pages/CarteiraPage';
 
-import { CounterProvider } from './Context/counter';
+import { DarkModeContext } from './Context/darkMode';
+import { ExtratoContext, ExtratoProvider } from './Context/extrato';
 
 function App() {
+  const { mode } = useContext(DarkModeContext);
+
   return (
-    <div className="App">
-      <CounterProvider>
+    <div className={mode ? 'AppDark' : 'AppLight'}>
+      <ExtratoProvider>
         <NavBar />
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/search' element={<SearchPage />} />
-          <Route path='/about' element={<AboutPage />} />
+          <Route path='/' element={<PagamentoPage />} />
+          <Route path='/extrato' element={<CarteiraPage />} />
           <Route path='/*' element={<NotFoundPage />} />
-          <Route path='/counter' element={<CounterPage />} />
         </Routes>
-      </CounterProvider>
+      </ExtratoProvider>
     </div>
   );
 }

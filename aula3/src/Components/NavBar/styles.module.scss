@@ -1,0 +1,21 @@
+
+.navbarCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0.5em;
+    background-color: darkblue;
+    color: white;
+}
+
+.navStripe{
+    padding: 0;
+}
+
+.navbarButton {
+    background-color: transparent;
+    border: none;
+}
