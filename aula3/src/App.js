@@ -11,6 +11,7 @@ import ReqPage from './Pages/RequisitionPage';
 import NewMusicPage from './Pages/NewMusicPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import CarteiraPage from './Pages/CarteiraPage';
+import CountryInfo from './Pages/CountryInfoPage';
 import PagamentoPage from './Pages/PagamentoPage';
 
 import { DarkModeContext } from './Context/darkMode';
@@ -25,6 +26,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<ReqPage />} />
+          <Route path='/country/:name' element={<CountryInfo />} />
           <Route path='/new' element={<NewMusicPage />} />
           <Route path='/add' element={<PagamentoPage />} />
           <Route path='/extrato' element={<CarteiraPage />} />
